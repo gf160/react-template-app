@@ -41,14 +41,15 @@ function App() {
 
   return (
     <div style={{width:'100%', height: '100%'}}>
+      <span>템플릿 선택</span>
       <SelectBox templateId={templateId} setTemplateId={setTemplateId} />
-      <div style={{width: '100%', height: '20px'}}>
+      <div style={{width: '100%', height: '20px', marginTop: "20px"}}>
         <label style={{float: 'left'}}>타이틀</label>
         <input type="text" value={title} onChange={titleChange} style={{float: 'left'}}/>
 
         <label style={{marginLeft: '10px', float: 'left'}}>SUB 타이틀</label>
         <input type="text" value={subTitle} onChange={subTitleChange} style={{float: 'left'}}/>
-        <button onClick={svgExport} style={{float: 'left'}}>export</button>
+        <button onClick={svgExport} style={{float: 'left', marginLeft: '10px'}}>export</button>
         <a id="download" href="#" ref={aTag} style={{display: 'none'}}>Download SVG</a>        
       </div>
       <div id="templateDiv">
